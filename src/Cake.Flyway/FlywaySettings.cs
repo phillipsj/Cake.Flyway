@@ -79,6 +79,10 @@ namespace Cake.Flyway {
             var builder = new ProcessArgumentBuilder();
             builder.Append($"url={settings.Url}");
 
+            if (!string.IsNullOrWhiteSpace(settings.Driver)) {
+                builder.Append($"driver={settings.Driver}");
+            }
+
             return builder;
         }
     }
