@@ -2,5 +2,8 @@
     /// <summary>
     /// Contains settings used by <see cref="FlywayInformation"/>.
     /// </summary>
-    public class FlywayInfoSettings : FlywaySettings { }
+    public class FlywayInfoSettings : FlywaySettings {
+        /// <inheritdoc cref="FlywaySettings"/>
+        public FlywayInfoSettings(string url) : base(url) { }
+    }
 }
