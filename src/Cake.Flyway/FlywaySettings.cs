@@ -11,7 +11,7 @@ namespace Cake.Flyway {
         /// Gets or sets he jdbc url to use to connect to the database
         /// </summary>
         /// <value>Atuo-detected based on URL.</value>
-        public string Url { get; }
+        public string Url { get; set; }
 
         /// <summary>
         /// Gets or sets he fully qualified classname of the jdbc driver to use to connect to the database.
@@ -69,11 +69,7 @@ namespace Cake.Flyway {
         /// <summary>
         /// The constructor.
         /// </summary>
-        /// <param name="url">The jdbc url to use to connect to the database, required.</param>
-        protected FlywaySettings(string url)
-        {
-            Url = url;
-        }
+        protected FlywaySettings() { }
 
         protected ProcessArgumentBuilder GetCommonArguments(FlywaySettings settings) {
             var builder = new ProcessArgumentBuilder();

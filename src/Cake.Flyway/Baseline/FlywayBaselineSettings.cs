@@ -28,8 +28,5 @@
         /// </summary>
         /// <value>&lt;&lt; Flyway Baseline &gt;&gt; </value>
         public string BaselineDescription { get; set; }
-
-        /// <inheritdoc cref="FlywaySettings"/>
-        public FlywayBaselineSettings(string url) : base(url) { }
     }
 }
